@@ -1,0 +1,25 @@
+[versions]
+agp = "9.5.1"
+kotlin = "2.4.21"
+# The ClipParse Android SDK. This app's code needs 1.2.0 or later; the
+# changelog lists the latest: https://github.com/clipparse/clipparse-android-sdk/blob/main/CHANGELOG.md
+clipparse = "1.2.0"
+compose-bom = "2026.09.00"
+activity-compose = "1.13.0"
+lifecycle = "2.11.1"
+coil = "3.6.3"
+
+[libraries]
+clipparse-sdk = { module = "com.clipparse:clipparse-android-sdk", version.ref = "clipparse" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
